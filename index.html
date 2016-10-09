@@ -1,16 +1,11 @@
 <html>
 <head>
-  <title>Your First React Project</title>
-  <style>
-    html, body {
-      font-family: Helvetica;
-      margin: 0;
-      padding: 0;
-    }
-    img {
-      width: 300px;
-    }
-  </style>
+  <title>Brittany Chiang</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div id="content"></div>
@@ -20,45 +15,98 @@
   <script type="text/jsx">
 
     var DATA = {
-        name: 'Brittany Chiang',
-        imgURL: 'http://brittanychiang.com/img/headshot.png',
-        hobbyList: ['snowboarding', 'sleeping', 'coding']
+      name: "Hey, I'm Brittany!",
+      subtext: "a web developer based in Boston",
+      jobStatus: "currently a software engineer at Starry",
+      imgURL: 'img/headshot-gradient.png',
+
+      educationList: ['Northeastern University', 'Candidate for Bachelor of Information Science 2018', 'Concentration in Human Computer Interaction, Minor in Interaction Design']
     }
 
     var App = React.createClass({
       render: function() {
         return(
-          <div>
-            <Profile name={this.props.profileData.name} imgURL={this.props.profileData.imgURL} />
-            <Hobbies hobbyList={this.props.profileData.hobbyList}/>
+          <div className="app">
+            <Left
+              name={this.props.profileData.name}
+              subtext={this.props.profileData.subtext}
+              jobStatus={this.props.profileData.jobStatus}
+              imgURL={this.props.profileData.imgURL}
+            />
+            <Right educationList={this.props.profileData.educationList}/>
           </div>
         );
       }
     });
 
-    var Profile = React.createClass({
+    var Left = React.createClass({
       render: function() {
         return(
-          <div>
-            <h3>{this.props.name}</h3>
-            <img src={this.props.imgURL}/>
+          <div className="left">
+            <div className="left-inner">
+              <div className="info-container">
+                <h2 className="name">{this.props.name}</h2>
+                <h3 className="subtext">{this.props.subtext}</h3>
+                <h3 className="jobStatus">{this.props.jobStatus}</h3>
+                <div className="social-links">
+                  <a href="#"><i className="fa fa-twitter"></i></a>
+                  <a href="#"><i className="fa fa-instagram"></i></a>
+                  <a href="#"><i className="fa fa-github"></i></a>
+                  <a href="#"><i className="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
           </div>
         );
       }
     });
 
-    var Hobbies = React.createClass({
+    var Right = React.createClass({
       render: function() {
         // loop through the hobbies array stored in this.props.hobbies
-        var hobbies = this.props.hobbyList.map( function(hobby, index) {
-          return ( <li key={index}>{hobby}</li> );
+        var education = this.props.educationList.map( function(edu, index) {
+          return ( <li key={index}>{edu}</li> );
         });
         return(
-          <div>
-            <h4>My Hobbies:</h4>
-            <ul>
-              {hobbies}
-            </ul>
+          <div className="right">
+            <div className="right-inner">
+              <div className="introduction">
+                <h4>Who am I?</h4>
+                <ul className="education-list">
+                  {education}
+                </ul>
+              </div>
+              <div className="education">
+                <h4>Education</h4>
+                <ul className="education-list">
+                  {education}
+                </ul>
+              </div>
+              <div className="experience">
+                <h4>Experience</h4>
+                <ul className="education-list">
+                  {education}
+                </ul>
+              </div>
+              <div className="projects">
+                <h4>Projects</h4>
+                <ul className="education-list">
+                  {education}
+                </ul>
+              </div>
+              <div className="projects">
+                <h4>Projects</h4>
+                <ul className="education-list">
+                  {education}
+                </ul>
+              </div>
+              <div className="projects">
+                <h4>Projects</h4>
+                <ul className="education-list">
+                  {education}
+                </ul>
+              </div>
+            </div>
           </div>
         );
       }

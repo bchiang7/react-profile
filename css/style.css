@@ -1,0 +1,102 @@
+html, body {
+  font-family: Helvetica;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.left,
+.right {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.left {
+  background: #43cea2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left top, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left top, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #efefef;
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+}
+.right {
+  float: right;
+}
+.left-inner,
+.right-inner {
+  padding: 50px;
+}
+
+.left-inner {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  min-height: 24em;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+}
+
+.info-container {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  flex: none;
+  max-width: 70%;
+  margin-top: 200px;
+  height: 100%;
+}
+
+.name {
+  color: #efefef;
+}
+
+.image {
+  width: 300px;
+}
+
+.education-list {
+  list-style: none;
+}
+
+.social-links {
+  margin-top: 50px;
+}
+
+.fa {
+  margin: 5px;
+  font-size: 20px;
+}
+
+a .fa {
+  color: #efefef;
+}
+
+.right h4,
+.right ul {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.right h4 {
+  width: 20%;
+  margin: 0;
+}
+
+.right ul {
+  width: 80%;
+  padding: 0;
+  margin: 0 0 50px;
+}
