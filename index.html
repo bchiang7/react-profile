@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,10 +18,12 @@
     var DATA = {
       name: "Hey, I'm Brittany!",
       subtext: "a web developer based in Boston",
-      jobStatus: "currently a software engineer at Starry",
+      jobStatus: "working at Starry as a software engineer",
       imgURL: 'img/headshot-gradient.png',
 
-      educationList: ['Northeastern University', 'Candidate for Bachelor of Information Science 2018', 'Concentration in Human Computer Interaction, Minor in Interaction Design']
+      intro: "I'm a fourth year student at Northeastern University studying computer science and interaction design, so I enjoy being the bridge between engineering and design. I'm experienced in developing and designing products for the web, from simple landing pages to full fledged web apps, aka a lot of JavaScript. While my passion lies in front end development, I'm always eager to learn new things across the stack. I'm currently on my second co-op at Starry, a start-up in downtown Boston, and I'm looking for my third and final co-op before I graduate in 2018.",
+
+      educationList: ['Northeastern University', 'College of Computer and Information Science', 'Candidate for Bachelor of Information Science 2018', 'Concentration in Human Computer Interaction, Minor in Interaction Design']
     }
 
     var App = React.createClass({
@@ -33,7 +36,7 @@
               jobStatus={this.props.profileData.jobStatus}
               imgURL={this.props.profileData.imgURL}
             />
-            <Right educationList={this.props.profileData.educationList}/>
+            <Right intro={this.props.profileData.intro} educationList={this.props.profileData.educationList}/>
           </div>
         );
       }
@@ -44,15 +47,15 @@
         return(
           <div className="left">
             <div className="left-inner">
-              <div className="info-container">
+              <div className="info">
                 <h2 className="name">{this.props.name}</h2>
                 <h3 className="subtext">{this.props.subtext}</h3>
                 <h3 className="jobStatus">{this.props.jobStatus}</h3>
                 <div className="social-links">
-                  <a href="#"><i className="fa fa-twitter"></i></a>
-                  <a href="#"><i className="fa fa-instagram"></i></a>
-                  <a href="#"><i className="fa fa-github"></i></a>
-                  <a href="#"><i className="fa fa-linkedin"></i></a>
+                  <a href="https://twitter.com/bchiang7"><i className="fa fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/bchiang7/"><i className="fa fa-instagram"></i></a>
+                  <a href="https://github.com/bchiang7"><i className="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/bchiang7"><i className="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -71,41 +74,100 @@
           <div className="right">
             <div className="right-inner">
               <div className="introduction">
-                <h4>Who am I?</h4>
-                <ul className="education-list">
-                  {education}
-                </ul>
+                <h4>Intro</h4>
+                <div className="content">
+                  <ul className="">
+                    {this.props.intro}
+                  </ul>
+                </div>
+              </div>
+              <div className="skills">
+                <h4>Skills</h4>
+                <div className="content">
+                  Fluent in
+                  Know my way around
+                  Learning cool things with
+                </div>
               </div>
               <div className="education">
                 <h4>Education</h4>
-                <ul className="education-list">
-                  {education}
-                </ul>
+                <div className="content">
+                  <div className="university">Northeastern University</div>
+                  <div className="college">College of Computer and Information Science</div>
+                  <div className="major"><strong>Major:</strong> Information Science</div>
+                  <div className="conc"><strong>Concentration:</strong> Human Computer Interaction</div>
+                  <div className="minor"><strong>Minor:</strong> Interaction Design</div>
+                  <div className="grad-date">Expected Graduation: May 2018</div>
+                </div>
               </div>
               <div className="experience">
                 <h4>Experience</h4>
-                <ul className="education-list">
-                  {education}
-                </ul>
+                <div className="content">
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="#">Starry</a>
+                      <div className="duration">July 2016 &mdash; Present</div>
+                    </div>
+                    <div className="title">Software Engineer Co-op</div>
+                    <ul className="description">
+                      <li>Build out major features of Starry’s customer-facing android app with Cordova, utilizing JavaScript (ES6), Handlebars, CSS3, Node.js, and Backbone.js</li>
+                      <li>Propose and implement design and engineering solutions to ensure optimal and coherent user experiences for Starry’s iOS and android apps</li>
+                      <li>Engineer and maintain RESTful cloud services responsible for communicating with the Starry Station router</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="#">Mullen Lowe U.S.</a>
+                      <div className="duration">July &mdash; Dec 2015</div>
+                    </div>
+                    <div className="title">Creative Technologist Co-op</div>
+                    <ul className="description">
+                      <li>Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery</li>
+                      <li>Tested code in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness</li>
+                      <li>Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Dept. of Defense, and more</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="#">Northeastern University</a>
+                      <div className="duration">Feb &mdash; April 2015</div>
+                    </div>
+                    <div className="title">Human Computer Interaction Research Assistant</div>
+                    <ul className="description">
+                      <li>Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</li>
+                    </ul>
+                  </div>
+
+                </div>
               </div>
               <div className="projects">
                 <h4>Projects</h4>
-                <ul className="education-list">
-                  {education}
-                </ul>
+                <div className="content">
+                  <div className="project-item">
+                    <a className="project-title" href="#">Personal Website</a>
+                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="#">Personal Website</a>
+                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="#">Personal Website</a>
+                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="#">Personal Website</a>
+                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="#">Personal Website</a>
+                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
+                  </div>
+                </div>
               </div>
-              <div className="projects">
-                <h4>Projects</h4>
-                <ul className="education-list">
-                  {education}
-                </ul>
-              </div>
-              <div className="projects">
-                <h4>Projects</h4>
-                <ul className="education-list">
-                  {education}
-                </ul>
-              </div>
+              <a className="resume" href="#">
+                <div className="resume-link">Grab a PDF of my resume</div>
+              </a>
             </div>
           </div>
         );

@@ -4,7 +4,8 @@ html, body {
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Catamaran', sans-serif;
+  letter-spacing: 0.3px;
 }
 
 a {
@@ -34,6 +35,21 @@ a {
 .right {
   float: right;
 }
+
+@media screen and (max-width: 1000px) {
+  .left, .right {
+    display: block;
+    width: 100%;
+  }
+  .left {
+    position: static;
+  }
+}
+
+.right a {
+  color: #000;
+}
+
 .left-inner,
 .right-inner {
   padding: 50px;
@@ -47,10 +63,9 @@ a {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-
 }
 
-.info-container {
+.left .info {
   -webkit-box-flex: 0;
   -webkit-flex: none;
   flex: none;
@@ -59,33 +74,29 @@ a {
   height: 100%;
 }
 
-.name {
+.left .info .name {
   color: #efefef;
 }
 
-.image {
+.left .info .image {
   width: 300px;
 }
 
-.education-list {
-  list-style: none;
-}
-
-.social-links {
+.left .info .social-links {
   margin-top: 50px;
 }
 
-.fa {
-  margin: 5px;
-  font-size: 20px;
+.left .info .fa {
+  margin: 10px;
+  font-size: 24px;
 }
 
-a .fa {
+.left .info a .fa {
   color: #efefef;
 }
 
 .right h4,
-.right ul {
+.right .content {
   display: inline-block;
   vertical-align: top;
 }
@@ -93,10 +104,111 @@ a .fa {
 .right h4 {
   width: 20%;
   margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: #2A54F5;
+  background-image: -webkit-linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  background-image: linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .right ul {
+  padding: 0;
+  margin: 0;
+}
+
+.right .content {
   width: 80%;
   padding: 0;
   margin: 0 0 50px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.right .content ul.description {
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.right .education {
+  font-size: 15px;
+}
+
+.right .education .university {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.right .education .grad-date {
+  text-transform: uppercase;
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.right .experience .exp-item {
+  margin-bottom: 30px;
+}
+
+.right .experience .exp-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.right .experience .exp-item .job {
+  margin: 0;
+  font-weight: 700;
+}
+
+.right .experience .exp-item .duration {
+  font-size: 13px;
+  font-weight: 500;
+  float: right;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.right .experience .exp-item .title {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.projects .project-item {
+  margin-bottom: 30px;
+}
+
+.projects .project-title {
+  font-weight: 700;
+}
+
+.projects .project-desc {
+  font-size: 15px;
+}
+
+a.resume {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+a.resume:hover {
+  background-color: #f1f1f1;
+}
+
+a.resume .resume-link {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #2A54F5;
+  background-image: -webkit-linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  background-image: linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
