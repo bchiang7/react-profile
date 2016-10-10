@@ -20,10 +20,6 @@ a {
 }
 
 .left {
-  background: #43cea2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left top, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left top, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   color: #efefef;
   width: 50%;
   height: 100%;
@@ -32,22 +28,29 @@ a {
   overflow: hidden;
   position: fixed;
 }
-.right {
-  float: right;
+
+.bg-img {
+  background: url('../img/headshot-bw.png') center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-@media screen and (max-width: 1000px) {
-  .left, .right {
-    display: block;
-    width: 100%;
-  }
-  .left {
-    position: static;
-  }
-}
-
-.right a {
-  color: #000;
+.bg-img:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #185a9d;
+  background-image: linear-gradient(to left top, #43cea2 , #185a9d);
+  opacity: 0.85;
 }
 
 .left-inner,
@@ -69,13 +72,17 @@ a {
   -webkit-box-flex: 0;
   -webkit-flex: none;
   flex: none;
-  max-width: 70%;
-  margin-top: 200px;
+  margin-top: 45%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
 }
 
 .left .info .name {
-  color: #efefef;
 }
 
 .left .info .image {
@@ -83,7 +90,7 @@ a {
 }
 
 .left .info .social-links {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .left .info .fa {
@@ -92,7 +99,25 @@ a {
 }
 
 .left .info a .fa {
-  color: #efefef;
+  color: #fff;
+}
+
+.right {
+  float: right;
+}
+
+@media screen and (max-width: 1000px) {
+  .left, .right {
+    display: block;
+    width: 100%;
+  }
+  .left {
+    position: static;
+  }
+}
+
+.right a {
+  color: #000;
 }
 
 .right h4,
@@ -132,6 +157,19 @@ a {
   font-size: 15px;
 }
 
+.right .introduction .intro-p:first-of-type {
+  margin-top: 0;
+}
+
+.right .skills .skill-category {
+  margin-bottom: 10px;
+}
+
+.right .skills .skill-category > strong {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
 .right .education {
   font-size: 15px;
 }
@@ -139,6 +177,31 @@ a {
 .right .education .university {
   font-weight: 700;
   font-size: 16px;
+}
+
+.right .education .college {
+  font-weight: 700;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.right .education .major,
+.right .education .minor,
+.right .education .conc,
+.right .education .study-abroad {
+  font-size: 14px;
+}
+
+.right .education .major > strong,
+.right .education .minor > strong,
+.right .education .conc > strong,
+.right .education .study-abroad > strong {
+  font-weight: 500;
+}
+
+.right .education .study-abroad {
+  margin-top: 10px;
 }
 
 .right .education .grad-date {

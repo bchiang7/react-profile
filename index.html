@@ -16,12 +16,12 @@
   <script type="text/jsx">
 
     var DATA = {
-      name: "Hey, I'm Brittany!",
+      name: "Hey, I'm Brittany",
       subtext: "a web developer based in Boston",
       jobStatus: "working at Starry as a software engineer",
       imgURL: 'img/headshot-gradient.png',
 
-      intro: "I'm a fourth year student at Northeastern University studying computer science and interaction design, so I enjoy being the bridge between engineering and design. I'm experienced in developing and designing products for the web, from simple landing pages to full fledged web apps, aka a lot of JavaScript. While my passion lies in front end development, I'm always eager to learn new things across the stack. I'm currently on my second co-op at Starry, a start-up in downtown Boston, and I'm looking for my third and final co-op before I graduate in 2018.",
+      intro: "",
 
       educationList: ['Northeastern University', 'College of Computer and Information Science', 'Candidate for Bachelor of Information Science 2018', 'Concentration in Human Computer Interaction, Minor in Interaction Design']
     }
@@ -46,16 +46,17 @@
       render: function() {
         return(
           <div className="left">
+            <div className="bg-img"></div>
             <div className="left-inner">
               <div className="info">
                 <h2 className="name">{this.props.name}</h2>
-                <h3 className="subtext">{this.props.subtext}</h3>
-                <h3 className="jobStatus">{this.props.jobStatus}</h3>
+                <div className="subtext">{this.props.subtext}</div>
+                <div className="jobStatus">{this.props.jobStatus}</div>
                 <div className="social-links">
-                  <a href="https://twitter.com/bchiang7"><i className="fa fa-twitter"></i></a>
-                  <a href="https://www.instagram.com/bchiang7/"><i className="fa fa-instagram"></i></a>
-                  <a href="https://github.com/bchiang7"><i className="fa fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/bchiang7"><i className="fa fa-linkedin"></i></a>
+                  <a href="https://twitter.com/bchiang7" target="_blank"><i className="fa fa-twitter"></i></a>
+                  <a href="https://www.instagram.com/bchiang7/" target="_blank"><i className="fa fa-instagram"></i></a>
+                  <a href="https://github.com/bchiang7" target="_blank"><i className="fa fa-github"></i></a>
+                  <a href="https://www.linkedin.com/in/bchiang7" target="_blank"><i className="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -76,27 +77,37 @@
               <div className="introduction">
                 <h4>Intro</h4>
                 <div className="content">
-                  <ul className="">
-                    {this.props.intro}
-                  </ul>
+                  <p className="intro-p">I&#39;m a web developer born and raised in Westchester, New York, currently in my fourth year (out of five) at Northeastern University in Boston.</p>
+                  <p className="intro-p">I enjoy being the bridge between engineering and design, and feel right at home as a front end engineer. I&#39;m experienced in developing and designing products for the web, from simple landing pages to full-fledged web apps. Needless to say, HTML, CSS, and JS are my bread a butter!</p>
+                  <p className="intro-p">I&#39;m currently on my second co-op at Starry, a start-up in downtown Boston, and I&#39;m looking for my third and final co-op before I graduate in 2018.</p>
                 </div>
               </div>
               <div className="skills">
                 <h4>Skills</h4>
                 <div className="content">
-                  Fluent in
-                  Know my way around
-                  Learning cool things with
+                  <div className="skill-category">
+                    <strong>Languages: &nbsp;</strong>
+                    <span>JavaScript (ES6), HTML5, CSS3, Java, Python</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                    <span>jQuery, Bootstrap, Foundation, Handlebars, Node, Backbone, Marionette, MongoDB, Cordova, Angular, Express, React</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Tools: &nbsp;</strong>
+                    <span>Git &amp; Github, Command Line, Grunt, Postman, Adobe Photoshop, InDesign</span>
+                  </div>
                 </div>
               </div>
               <div className="education">
                 <h4>Education</h4>
                 <div className="content">
-                  <div className="university">Northeastern University</div>
-                  <div className="college">College of Computer and Information Science</div>
+                  <div className="university"><a href="http://www.northeastern.edu/" target="_blank">Northeastern University</a></div>
+                  <div className="college"><a href="http://www.ccis.northeastern.edu/" target="_blank">College of Computer and Information Science</a></div>
                   <div className="major"><strong>Major:</strong> Information Science</div>
-                  <div className="conc"><strong>Concentration:</strong> Human Computer Interaction</div>
                   <div className="minor"><strong>Minor:</strong> Interaction Design</div>
+                  <div className="conc"><strong>Concentration:</strong> Human Computer Interaction</div>
+                  <div className="study-abroad"><strong>Study Abroad:</strong> Experience Design of Travel in Budapest, Hungary</div>
                   <div className="grad-date">Expected Graduation: May 2018</div>
                 </div>
               </div>
@@ -105,7 +116,7 @@
                 <div className="content">
                   <div className="exp-item">
                     <div className="job">
-                      <a className="company" href="#">Starry</a>
+                      <a className="company" href="#" target="_blank">Starry</a>
                       <div className="duration">July 2016 &mdash; Present</div>
                     </div>
                     <div className="title">Software Engineer Co-op</div>
@@ -117,7 +128,7 @@
                   </div>
                   <div className="exp-item">
                     <div className="job">
-                      <a className="company" href="#">Mullen Lowe U.S.</a>
+                      <a className="company" href="#" target="_blank">Mullen Lowe U.S.</a>
                       <div className="duration">July &mdash; Dec 2015</div>
                     </div>
                     <div className="title">Creative Technologist Co-op</div>
@@ -129,7 +140,7 @@
                   </div>
                   <div className="exp-item">
                     <div className="job">
-                      <a className="company" href="#">Northeastern University</a>
+                      <a className="company" href="#" target="_blank">Northeastern University</a>
                       <div className="duration">Feb &mdash; April 2015</div>
                     </div>
                     <div className="title">Human Computer Interaction Research Assistant</div>
@@ -144,28 +155,24 @@
                 <h4>Projects</h4>
                 <div className="content">
                   <div className="project-item">
-                    <a className="project-title" href="#">Personal Website</a>
-                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
+                    <a className="project-title" href="#" target="_blank">Personal Website</a>
+                    <p className="project-desc">Portfolio site coded from scratch to showcase my skills and past work</p>
                   </div>
                   <div className="project-item">
-                    <a className="project-title" href="#">Personal Website</a>
-                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
+                    <a className="project-title" href="#" target="_blank">CourseSource</a>
+                    <p className="project-desc">Web app built on the MEAN (MongoDB, Express, Angular, Node) stack for my web development class. Created with the intention of providing students a better experience browsing the courses offered at Northeastern</p>
                   </div>
                   <div className="project-item">
-                    <a className="project-title" href="#">Personal Website</a>
-                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
+                    <a className="project-title" href="#" target="_blank">NU Women in Tech Website</a>
+                    <p className="project-desc">Club website redesigned and redeveloped as while serving as web chair on e-board</p>
                   </div>
                   <div className="project-item">
-                    <a className="project-title" href="#">Personal Website</a>
-                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
-                  </div>
-                  <div className="project-item">
-                    <a className="project-title" href="#">Personal Website</a>
-                    <p className="project-desc">Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</p>
+                    <a className="project-title" href="#" target="_blank">One Card For All</a>
+                    <p className="project-desc">2015 Mullen Lowe U.S. holiday site built around an algorithm that generated a holiday greeting to each and every person on the planet.</p>
                   </div>
                 </div>
               </div>
-              <a className="resume" href="#">
+              <a className="resume" href="http://brittanychiang.com/resume2017.pdf" target="_blank">
                 <div className="resume-link">Grab a PDF of my resume</div>
               </a>
             </div>
