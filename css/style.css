@@ -29,8 +29,8 @@ a {
   position: fixed;
 }
 
-.bg-img {
-  background: url('../img/headshot-bw.png') center center no-repeat;
+.left .bg-img {
+  background: url('../img/headshot1-bw.png') center center no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -41,7 +41,7 @@ a {
   left: 0;
 }
 
-.bg-img:before{
+.left .bg-img:before{
   content: '';
   position: absolute;
   top: 0;
@@ -58,6 +58,13 @@ a {
   padding: 50px;
 }
 
+@media screen and (max-width: 400px) {
+  .left-inner,
+  .right-inner {
+    padding: 40px;
+  }
+}
+
 .left-inner {
   display: flex;
   -webkit-box-align: center;
@@ -66,27 +73,28 @@ a {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  height: 100%;
 }
 
 .left .info {
   -webkit-box-flex: 0;
   -webkit-flex: none;
   flex: none;
-  margin-top: 45%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50%;
 }
 
-.left .info .name {
-}
-
-.left .info .image {
-  width: 300px;
+@media screen and (max-width: 1000px) {
+  .left .info {
+    margin-top: 300px;
+  }
 }
 
 .left .info .social-links {
@@ -96,14 +104,7 @@ a {
 .left .info .fa {
   margin: 10px;
   font-size: 24px;
-}
-
-.left .info a .fa {
   color: #fff;
-}
-
-.right {
-  float: right;
 }
 
 @media screen and (max-width: 1000px) {
@@ -114,6 +115,10 @@ a {
   .left {
     position: static;
   }
+}
+
+.right {
+  float: right;
 }
 
 .right a {
@@ -128,7 +133,7 @@ a {
 
 .right h4 {
   width: 20%;
-  margin: 0;
+  margin: 0 0 20px;
   text-transform: uppercase;
   font-size: 14px;
   background-color: #2A54F5;
@@ -151,6 +156,16 @@ a {
   line-height: 1.5;
 }
 
+
+@media screen and (max-width: 600px) {
+  .right h4,
+  .right .content {
+    display: block;
+    vertical-align: top;
+    width: 100%;
+  }
+}
+
 .right .content ul.description {
   padding-left: 20px;
   margin-top: 10px;
@@ -160,6 +175,17 @@ a {
 .right .introduction .intro-p:first-of-type {
   margin-top: 0;
 }
+
+.right .introduction .job-pls {
+  font-weight: 500;
+  background-color: #2A54F5;
+  background-image: -webkit-linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  background-image: linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
 
 .right .skills .skill-category {
   margin-bottom: 10px;
@@ -171,7 +197,7 @@ a {
 }
 
 .right .education {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .right .education .university {
@@ -190,7 +216,7 @@ a {
 .right .education .minor,
 .right .education .conc,
 .right .education .study-abroad {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .right .education .major > strong,
@@ -209,7 +235,7 @@ a {
   color: #aaa;
   font-size: 13px;
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .right .experience .exp-item {
@@ -231,6 +257,15 @@ a {
   float: right;
   color: #aaa;
   text-transform: uppercase;
+  position: relative;
+  top: 1px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 340px) {
+  .right .experience .exp-item .duration {
+    float: none;
+  }
 }
 
 .right .experience .exp-item .title {
@@ -238,19 +273,20 @@ a {
   font-style: italic;
 }
 
-.projects .project-item {
-  margin-bottom: 30px;
+.right .projects .project-item {
+  margin-bottom: 20px;
 }
 
-.projects .project-title {
+.right .projects .project-title {
   font-weight: 700;
 }
 
-.projects .project-desc {
+.right .projects .project-desc {
   font-size: 15px;
+  margin: 0 0 10px;
 }
 
-a.resume {
+.right a.resume {
   display: block;
   width: 90%;
   margin: 0 auto;
@@ -261,13 +297,13 @@ a.resume {
   transition: all 0.3s ease;
 }
 
-a.resume:hover {
+.right a.resume:hover {
   background-color: #f1f1f1;
 }
 
-a.resume .resume-link {
+.right a.resume .resume-link {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
   background-color: #2A54F5;
   background-image: -webkit-linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);

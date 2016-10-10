@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Brittany Chiang</title>
+  <title>Resume | Brittany Chiang</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
@@ -18,12 +18,12 @@
     var DATA = {
       name: "Hey, I'm Brittany",
       subtext: "a web developer based in Boston",
-      jobStatus: "working at Starry as a software engineer",
-      imgURL: 'img/headshot-gradient.png',
-
-      intro: "",
-
-      educationList: ['Northeastern University', 'College of Computer and Information Science', 'Candidate for Bachelor of Information Science 2018', 'Concentration in Human Computer Interaction, Minor in Interaction Design']
+      jobStatus: "currently a software engineer co-op @ Starry Internet",
+      twitterURL: 'https://twitter.com/bchiang7',
+      instaURL: 'https://www.instagram.com/bchiang7/',
+      githubURL: 'https://github.com/bchiang7',
+      linkedinURL: 'https://www.linkedin.com/in/bchiang7',
+      resumeURL: 'http://brittanychiang.com/resume2017.pdf'
     }
 
     var App = React.createClass({
@@ -34,9 +34,15 @@
               name={this.props.profileData.name}
               subtext={this.props.profileData.subtext}
               jobStatus={this.props.profileData.jobStatus}
-              imgURL={this.props.profileData.imgURL}
+              twitterURL={this.props.profileData.twitterURL}
+              instaURL={this.props.profileData.instaURL}
+              githubURL={this.props.profileData.githubURL}
+              linkedinURL={this.props.profileData.linkedinURL}
             />
-            <Right intro={this.props.profileData.intro} educationList={this.props.profileData.educationList}/>
+            <Right
+              intro={this.props.profileData.intro}
+              resumeURL={this.props.profileData.resumeURL}
+            />
           </div>
         );
       }
@@ -53,10 +59,10 @@
                 <div className="subtext">{this.props.subtext}</div>
                 <div className="jobStatus">{this.props.jobStatus}</div>
                 <div className="social-links">
-                  <a href="https://twitter.com/bchiang7" target="_blank"><i className="fa fa-twitter"></i></a>
-                  <a href="https://www.instagram.com/bchiang7/" target="_blank"><i className="fa fa-instagram"></i></a>
-                  <a href="https://github.com/bchiang7" target="_blank"><i className="fa fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/bchiang7" target="_blank"><i className="fa fa-linkedin"></i></a>
+                  <a href={this.props.twitterURL} target="_blank"><i className="fa fa-twitter"></i></a>
+                  <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -67,19 +73,15 @@
 
     var Right = React.createClass({
       render: function() {
-        // loop through the hobbies array stored in this.props.hobbies
-        var education = this.props.educationList.map( function(edu, index) {
-          return ( <li key={index}>{edu}</li> );
-        });
         return(
           <div className="right">
             <div className="right-inner">
               <div className="introduction">
                 <h4>Intro</h4>
                 <div className="content">
-                  <p className="intro-p">I&#39;m a web developer born and raised in Westchester, New York, currently in my fourth year (out of five) at Northeastern University in Boston.</p>
-                  <p className="intro-p">I enjoy being the bridge between engineering and design, and feel right at home as a front end engineer. I&#39;m experienced in developing and designing products for the web, from simple landing pages to full-fledged web apps. Needless to say, HTML, CSS, and JS are my bread a butter!</p>
-                  <p className="intro-p">I&#39;m currently on my second co-op at Starry, a start-up in downtown Boston, and I&#39;m looking for my third and final co-op before I graduate in 2018.</p>
+                  <p className="intro-p">I&#39;m a web developer currently in my fourth year (out of five) at Northeastern University in Boston, MA.</p>
+                  <p className="intro-p">I enjoy being the bridge between engineering and design, and feel right at home as a front end engineer. I&#39;m experienced in developing and designing products for the web, from simple landing pages to full-fledged web apps.</p>
+                  <span className="intro-p job-pls">I&#39;m currently looking for my third and final co-op (from July - Dec 2017) before I graduate in 2018!</span>
                 </div>
               </div>
               <div className="skills">
@@ -91,7 +93,7 @@
                   </div>
                   <div className="skill-category">
                     <strong>Libraries &amp; Frameworks: &nbsp;</strong>
-                    <span>jQuery, Bootstrap, Foundation, Handlebars, Node, Backbone, Marionette, MongoDB, Cordova, Angular, Express, React</span>
+                    <span>jQuery, Bootstrap, Foundation, Handlebars, Node, Backbone, Marionette, Cordova, MongoDB, Angular, Express, React</span>
                   </div>
                   <div className="skill-category">
                     <strong>Tools: &nbsp;</strong>
@@ -116,7 +118,7 @@
                 <div className="content">
                   <div className="exp-item">
                     <div className="job">
-                      <a className="company" href="#" target="_blank">Starry</a>
+                      <a className="company" href="https://starry.com/" target="_blank">Starry</a>
                       <div className="duration">July 2016 &mdash; Present</div>
                     </div>
                     <div className="title">Software Engineer Co-op</div>
@@ -128,7 +130,7 @@
                   </div>
                   <div className="exp-item">
                     <div className="job">
-                      <a className="company" href="#" target="_blank">Mullen Lowe U.S.</a>
+                      <a className="company" href="http://us.mullenlowe.com/" target="_blank">Mullen Lowe U.S.</a>
                       <div className="duration">July &mdash; Dec 2015</div>
                     </div>
                     <div className="title">Creative Technologist Co-op</div>
@@ -138,43 +140,30 @@
                       <li>Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Dept. of Defense, and more</li>
                     </ul>
                   </div>
-                  <div className="exp-item">
-                    <div className="job">
-                      <a className="company" href="#" target="_blank">Northeastern University</a>
-                      <div className="duration">Feb &mdash; April 2015</div>
-                    </div>
-                    <div className="title">Human Computer Interaction Research Assistant</div>
-                    <ul className="description">
-                      <li>Utilized front end technologies to assist with the development a software prototype that facilitated better understanding of parent-child communication preferences and needs in low socio-economic status families</li>
-                    </ul>
-                  </div>
-
                 </div>
               </div>
               <div className="projects">
                 <h4>Projects</h4>
                 <div className="content">
                   <div className="project-item">
-                    <a className="project-title" href="#" target="_blank">Personal Website</a>
+                    <a className="project-title" href="http://brittanychiang.com/" target="_blank">brittanychiang.com</a>
                     <p className="project-desc">Portfolio site coded from scratch to showcase my skills and past work</p>
                   </div>
                   <div className="project-item">
-                    <a className="project-title" href="#" target="_blank">CourseSource</a>
+                    <div className="project-title">CourseSource</div>
                     <p className="project-desc">Web app built on the MEAN (MongoDB, Express, Angular, Node) stack for my web development class. Created with the intention of providing students a better experience browsing the courses offered at Northeastern</p>
                   </div>
                   <div className="project-item">
-                    <a className="project-title" href="#" target="_blank">NU Women in Tech Website</a>
+                    <a className="project-title" href="http://nuwit.ccs.neu.edu/" target="_blank">NU Women in Tech Website</a>
                     <p className="project-desc">Club website redesigned and redeveloped as while serving as web chair on e-board</p>
                   </div>
                   <div className="project-item">
-                    <a className="project-title" href="#" target="_blank">One Card For All</a>
-                    <p className="project-desc">2015 Mullen Lowe U.S. holiday site built around an algorithm that generated a holiday greeting to each and every person on the planet.</p>
+                    <a className="project-title" href="http://onecardforall.mullenloweus.com/" target="_blank">One Card For All</a>
+                    <p className="project-desc">2015 Mullen Lowe U.S. holiday site built around an algorithm that generated a holiday greeting to each and every person on the planet</p>
                   </div>
                 </div>
               </div>
-              <a className="resume" href="http://brittanychiang.com/resume2017.pdf" target="_blank">
-                <div className="resume-link">Grab a PDF of my resume</div>
-              </a>
+              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
             </div>
           </div>
         );
