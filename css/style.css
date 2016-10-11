@@ -97,6 +97,10 @@ a {
   }
 }
 
+.left .info .name {
+  font-weight: 500;
+}
+
 .left .info .social-links {
   margin-top: 30px;
 }
@@ -191,6 +195,10 @@ a {
   margin-bottom: 10px;
 }
 
+.right .skills .skill-category:last-of-type {
+  margin-bottom: 0px;
+}
+
 .right .skills .skill-category > strong {
   text-transform: uppercase;
   font-size: 14px;
@@ -207,7 +215,6 @@ a {
 
 .right .education .college {
   font-weight: 700;
-  font-size: 14px;
   font-style: italic;
   margin-bottom: 10px;
 }
@@ -288,10 +295,11 @@ a {
 
 .right a.resume {
   display: block;
-  width: 90%;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
-  padding: 15px 20px;
+  padding: 15px 0px;
   background-color: #f5f5f5;
   border-radius: 5px;
   transition: all 0.3s ease;
