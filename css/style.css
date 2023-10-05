@@ -30,7 +30,7 @@ a {
 }
 
 .left .bg-img {
-  background: url('../img/headshot1-bw.png') center center no-repeat;
+  background: url('../img/ShivaniKalamadi_PortfolioPic.png') center center no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -88,26 +88,29 @@ a {
   color: #fff;
   width: 90%;
   margin: 0 auto;
-  margin-top: 50%;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 1000px) {
   .left .info {
-    margin-top: 300px;
+    margin-top: 20px;
   }
 }
 
 .left .info .name {
-  font-weight: 500;
+  margin-top: 50px;
+  font-weight: 50;
+  font-size: 70px;
+  margin-bottom: 50px;
 }
 
 .left .info .social-links {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .left .info .fa {
   margin: 10px;
-  font-size: 24px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -153,11 +156,12 @@ a {
 }
 
 .right .content {
-  width: 80%;
+  width: 75%;
   padding: 0;
   margin: 0 0 50px;
   font-weight: 300;
   line-height: 1.5;
+  justify-content: space-evenly;
 }
 
 
@@ -238,11 +242,11 @@ a {
 }
 
 .right .education .grad-date {
-  text-transform: uppercase;
   color: #aaa;
-  font-size: 13px;
-  font-weight: 500;
-  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-right: 15px;
 }
 
 .right .experience .exp-item {
@@ -278,6 +282,7 @@ a {
 .right .experience .exp-item .title {
   font-weight: 700;
   font-style: italic;
+  margin-top: 10px;
 }
 
 .right .projects .project-item {
@@ -319,3 +324,154 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.right .education .grad-date-divide{
+  margin-right: 15px;
+  font-weight: 300;
+  font-size: 14px;
+  background-color: #2a2af5;
+  background-image: -webkit-linear-gradient(45deg,#2a2af5 0%,#e53398 100%);
+  background-image: linear-gradient(45deg,#2a2af5 0%,#e53398 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.right .experience .exp-item .duration2 {
+  font-size: 12px;
+  font-weight: 500;
+  float: right;
+  color: #aaa;
+  position: relative;
+  top: 1px;
+  margin-bottom: 5px;
+}
+
+.styled-buttons{
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.styled-buttons:hover {
+  border: 0.01px solid white;
+}
+
+.styled-buttons2{
+  text-transform: uppercase;
+  padding: 15px 15px;
+  text-align: center;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background-color: #2A54F5;
+  background-image: -webkit-linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  background-image: linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.styled-buttons2:hover {
+  border: 0.01px solid black;
+}
+
+/* Style for the form container */
+.left.form {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 1);
+}
+
+/* Style for form labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style for form input fields */
+input[type="text"],
+textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+  font-size: 30px;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+.contact{
+  background-color: #ffffff;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.contact-text{
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: #2A54F5;
+  background-image: -webkit-linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  background-image: linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact_d {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.styled-buttons3{
+  text-transform: uppercase;
+  padding: 15px 15px;
+  text-align: center;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background-color: #2A54F5;
+  background-image: -webkit-linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  background-image: linear-gradient(45deg,#2A54F5 0%,#33E5BB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+
