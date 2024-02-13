@@ -1,212 +1,170 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Resume | Brittany Chiang</title>
-  <meta charset="UTF-8"><!--[if IE]><![endif]-->
+  <title>Portfolio | Shivani Kalamadi</title>
+  <meta charset="UTF-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-  <title>Brittany Chiang | Web Developer &amp; UX Enthusiast</title>
-  <link rel="shortcut icon" href="http://brittanychiang.com/img/logo-black.png" hreflang="en-us">
-
-  <meta property="og:title" content="Resume | Brittany Chiang" />
-  <meta property="og:description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.brittanychiang.com/resume" />
-  <meta property="og:site_name" content="Resume | Brittany Chiang" />
-  <meta property="og:image" content="http://brittanychiang.com/img/og.png" />
-  <meta property="og:image:width" content="1280" />
-  <meta property="og:image:height" content="672" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:locale" content="en_US">
-
-  <meta name="description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
-  <meta name="keywords" content="design, development, web, bchiang7, brittany, chiang, javascript, northeastern">
-  <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
-
-  <meta itemprop="name" content="Resume | Brittany Chiang">
-  <meta itemprop="description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
-  <meta itemprop="image" content="http://brittanychiang.com/img/og.png">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="http://brittanychiang.com/resume">
-  <meta name="twitter:site" content="@bchiang7">
-  <meta name="twitter:creator" content="@bchiang7">
-  <meta name="twitter:title" content="Resume | Brittany Chiang">
-  <meta name="twitter:description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
-  <meta name="twitter:image:src" content="http://brittanychiang.com/img/og.png">
+  <title>Shivani Kalamadi | Software Engineer | Cloud Consultant</title>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="content"></div>
-  <script src="https://fb.me/react-0.14.6.js"></script>
-  <script src="https://fb.me/react-dom-0.14.6.js"></script>
-  <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
-  <script type="text/jsx">
-
-    var DATA = {
-      name: "Hey, I'm Brittany",
-      subtext: "Developer & designer based in Boston, MA",
-      jobStatus: "Software Engineer Co-op @ Starry Internet",
-      twitterURL: 'https://twitter.com/bchiang7',
-      instaURL: 'https://www.instagram.com/bchiang7/',
-      githubURL: 'https://github.com/bchiang7',
-      linkedinURL: 'https://www.linkedin.com/in/bchiang7',
-      resumeURL: 'http://brittanychiang.com/resume.pdf'
-    }
-
-    var App = React.createClass({
-      render: function() {
-        return(
-          <div className="app">
-            <Left
-              name={this.props.profileData.name}
-              subtext={this.props.profileData.subtext}
-              jobStatus={this.props.profileData.jobStatus}
-              twitterURL={this.props.profileData.twitterURL}
-              instaURL={this.props.profileData.instaURL}
-              githubURL={this.props.profileData.githubURL}
-              linkedinURL={this.props.profileData.linkedinURL}
-            />
-            <Right
-              intro={this.props.profileData.intro}
-              resumeURL={this.props.profileData.resumeURL}
-            />
+  <div id="content" class="app">
+    <div class="left">
+      <div class="bg-img"></div>
+      <div class="left-inner">
+        <div class="info">
+          <h2 class="name">Hey, I'm Shivani</h2>
+          <div class="subtext">Software Developer & Technical Consultant</div>
+          <div class="jobStatus">Master's in Computer Science @ UC Davis</div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/shivanikalamadi/" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/shivani-k" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.instagram.com/shivanikalamadi/" target="_blank"><i class="fa fa-instagram"></i></a>
           </div>
-        );
-      }
-    });
-
-    var Left = React.createClass({
-      render: function() {
-        return(
-          <div className="left">
-            <div className="bg-img"></div>
-            <div className="left-inner">
-              <div className="info">
-                <h2 className="name">{this.props.name}</h2>
-                <div className="subtext">{this.props.subtext}</div>
-                <div className="jobStatus">{this.props.jobStatus}</div>
-                <div className="social-links">
-                  <a href={this.props.twitterURL} target="_blank"><i className="fa fa-twitter"></i></a>
-                  <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
-                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
-                  <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
-                </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="right-inner">
+        <div class="introduction">
+          <h4>Intro</h4>
+          <div class="content">
+            <p class="intro-p">I'm currently in my final year of Master's in Computer Science at University of California Davis.</p>
+            <p class="intro-p">Originally from Bangalore, I have about 3 years of industry experience after my undergrad in CS. I have worked at Oracle on its Fusion Technologies and rigorously executed project and client goals.</p>
+            <p class="intro-p">I enjoy coding especially when it's with loads of data. I'm experienced in developing and designing solutions that are efficient in execution, thorough in analysis and robust from a security standpoint.</p>
+            <!-- <span class="intro-p job-pls">I'm currently looking for full-time roles to start after my graduation in June 2024!</span> -->
+          </div>
+        </div>
+        <div class="skills">
+          <h4>Skills</h4>
+          <div class="content">
+            <div class="skill-category">
+              <strong>Languages I code in: &nbsp;</strong>
+              <span>C, C++, Java, Python, SQL and PL/SQL, HTML5, JavaScript, TypeScript, CSS</span>
+            </div>
+            <div class="skill-category">
+              <strong>Tools I'm comfortable with: &nbsp;</strong>
+              <span>Git & Github, Command Line, REST, SOAP, Kubernetes, DevOps, BIP, OTBI, OIC</span>
+            </div>
+          </div>
+        </div>
+        <div class="education">
+          <h4>Education</h4>
+          <div class="content">
+            <div class="university"><a href="https://www.ucdavis.edu" target="_blank">University of California Davis</a></div>
+            <div class="college"><a href="https://cs.ucdavis.edu" target="_blank">Graduate Studies in Computer Science</a></div>
+            <div class="conc"><strong>Relevant Coursework:</strong> Design and Analysis of Algorithms, Distributed Database Systems, Machine Learning and Discovery, Software Engineering, Topics in Network Security and Privacy, Operating Systems, Computer Architecture, Research and Teaching in Computer Science</div>
+            <!-- <div class="grad-date">Current GPA: 3.91 &emsp; Expected Graduation: June 2024</div> -->
+            <div class="grad-date">Current GPA: 3.91</div>
+            <br>
+            <div class="university"><a href="https://sdmcet.ac.in" target="_blank">SDM College of Engineering and Technology</a></div>
+            <div class="college"><a href="https://sdmcet.ac.in/ug/computer-science-engineering/" target="_blank">Undergrad in Computer Science</a></div>
+            <div class="conc"><strong>Relevant Coursework:</strong> Computer Networks, Advanced Data Structures, Advanced OOP, Advanced Computer Architecture, Big Data Analytics, Cryptography and Network Security, Data warehousing and Mining</div>
+            <!-- <div class="grad-date">GPA: 4.0 &emsp; Class of 2019</div> -->
+            <div class="grad-date">GPA: 4.0</div>
+          </div>
+          
+        </div>
+        <div class="experience">
+          <h4>Experience</h4>
+          <div class="content">
+            <!-- Add your experience details here -->
+            <div class="exp-item">
+              <div class="job">
+                <a class="company" href="https://www.oracle.com/erp/" target="_blank">Oracle</a>
+                <div class="duration">Aug 2019 &mdash; May 2022 ~ 3 years</div>
+              </div>
+              <div>
+                <div class="title">Cloud Analyst<span class="duration2">13 months</span></div>
+                <ul class="description">
+                  <li>As part of <a href="https://www.oracle.com/consulting/" target=”_blank”><u>Global Service Delivery</u></a> team, worked on <a href="https://www.oracle.com/consulting/erp/" target=”_blank”><u>ERP</u></a> division of Oracle Fusion Applications</li>
+                  <li>Created customer-facing reports <a href="https://www.oracle.com/middleware/technologies/analytics-publisher.html" target=”_blank”><u>Business Intelligence Publisher (BIP)</u></a> for various financial transactions from Purchase Orders to Receipts</li>
+                  <li>Customized complex seeded reports in SQL</li>
+                  <li>Extensively worked on bursting BI Reports, creating and scheduling <a href="https://docs.oracle.com/middleware/11119/ess/develop/intro.htm" target="_blank"><u>ESS</u></a> jobs</li>
+                </ul>
+                <div class="title">Senior Cloud Analyst<span class="duration2">17 months</span></div>
+                <ul class="description">
+                  <li>Developed dataflows among various source points through <a href="https://www.oracle.com/integration/application-integration/#:~:text=Oracle%20Integration%20gives%20you%20a,dashboards%20directly%20in%20your%20applications." target="_blank"><u>Inbound and Outbound Integrations</u></a></li>
+                  <li>Exhaustively explored <a href="https://docs.oracle.com/en/cloud/saas/financials/23c/farfa/index.html" target="_blank"><u>Fusion's REST and SOAP</u></a> services for Reports and Integrations</li>
+                  <li>Worked with Oracle's web services, API's and <a href="https://docs.oracle.com/en/cloud/saas/financials/23c/oefbf/external-data-integration-services-for-importing-data.html#u30005887" target="_blank"><u>FBDI</u></a> templates to automate data collection and exchange in JSON</li>
+                  <li>Revised multiple project deliverables focusing on code re-usability</li>
+                </ul>
+                <div class="title">Cloud Engineer<span class="duration2">3 months</span></div>
+                <ul class="description">
+                  <li>Worked on <a href="https://www.oracle.com/integration/" target="_blank"><u>Oracle Integration Cloud (OIC)</u></a> and gained expertise in functional modules of <a href="https://www.oracle.com/erp/erp-modules/" target="_blank"><u>ERP</u></a>- Financials, Chart of Accounts, Project Portfolio, Inventory and Supply Chain Management.</li>
+                  <li>Lead the campus-to-corporate initiative program, and mentored new hires - Class of 2020 and 2021</li>
+                </ul>
               </div>
             </div>
           </div>
-        );
-      }
-    });
-
-    var Right = React.createClass({
-      render: function() {
-        return(
-          <div className="right">
-            <div className="right-inner">
-              <div className="introduction">
-                <h4>Intro</h4>
-                <div className="content">
-                  <p className="intro-p">I&#39;m currently in my fourth year (out of five) studying computer science and interaction design at Northeastern University.</p>
-                  <p className="intro-p">I enjoy being the bridge between engineering and design, and feel right at home as a front end engineer. I&#39;m experienced in developing and designing products for the web, from simple landing pages to full-fledged web apps.</p>
-                  <span className="intro-p job-pls">I&#39;m currently looking for my third and final co-op (from July to December 2017) before I graduate in 2018!</span>
-                </div>
-              </div>
-              <div className="skills">
-                <h4>Skills</h4>
-                <div className="content">
-                  <div className="skill-category">
-                    <strong>Languages: &nbsp;</strong>
-                    <span>JavaScript (ES6), HTML5, CSS3, Java, Python</span>
-                  </div>
-                  <div className="skill-category">
-                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
-                    <span>jQuery, Bootstrap, Foundation, Handlebars, Node, Backbone, Marionette, Cordova, MongoDB, Angular, Express, React</span>
-                  </div>
-                  <div className="skill-category">
-                    <strong>Tools: &nbsp;</strong>
-                    <span>Git &amp; Github, Command Line, Grunt, Postman, Adobe Photoshop, InDesign</span>
-                  </div>
-                </div>
-              </div>
-              <div className="education">
-                <h4>Education</h4>
-                <div className="content">
-                  <div className="university"><a href="http://www.northeastern.edu/" target="_blank">Northeastern University</a></div>
-                  <div className="college"><a href="http://www.ccis.northeastern.edu/" target="_blank">College of Computer and Information Science</a></div>
-                  <div className="major"><strong>Major:</strong> Information Science</div>
-                  <div className="minor"><strong>Minor:</strong> Interaction Design</div>
-                  <div className="conc"><strong>Concentration:</strong> Human Computer Interaction</div>
-                  <div className="study-abroad"><strong>Study Abroad:</strong> Experience Design of Travel in Budapest, Hungary</div>
-                  <div className="grad-date">Expected Graduation: May 2018</div>
-                </div>
-              </div>
-              <div className="experience">
-                <h4>Experience</h4>
-                <div className="content">
-                  <div className="exp-item">
-                    <div className="job">
-                      <a className="company" href="https://starry.com/" target="_blank">Starry, Inc.</a>
-                      <div className="duration">July 2016 &mdash; Present</div>
-                    </div>
-                    <div className="title">Software Engineer Co-op</div>
-                    <ul className="description">
-                      <li>Build out major features of Starry’s customer-facing android app with Cordova, utilizing JavaScript (ES6), Handlebars, CSS3, Node.js, and Backbone.js</li>
-                      <li>Propose and implement design and engineering solutions to ensure optimal and coherent user experiences for Starry’s iOS and android apps</li>
-                      <li>Engineer and maintain RESTful cloud services responsible for communicating with the Starry Station router</li>
-                    </ul>
-                  </div>
-                  <div className="exp-item">
-                    <div className="job">
-                      <a className="company" href="http://us.mullenlowe.com/" target="_blank">Mullen Lowe U.S.</a>
-                      <div className="duration">July &mdash; Dec 2015</div>
-                    </div>
-                    <div className="title">Creative Technologist Co-op</div>
-                    <ul className="description">
-                      <li>Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery</li>
-                      <li>Tested code in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness</li>
-                      <li>Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Dept. of Defense, and more</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="projects">
-                <h4>Projects</h4>
-                <div className="content">
-                  <div className="project-item">
-                    <a className="project-title" href="http://brittanychiang.com/" target="_blank">brittanychiang.com</a>
-                    <p className="project-desc">Portfolio site designed and coded from scratch to showcase my skills and past work</p>
-                  </div>
-                  <div className="project-item">
-                    <div className="project-title">CourseSource</div>
-                    <p className="project-desc">Web app built on the MEAN (MongoDB, Express, Angular, Node) stack for my web development class. Created with the intention of providing students a better experience browsing the courses offered at Northeastern</p>
-                  </div>
-                  <div className="project-item">
-                    <a className="project-title" href="http://nuwit.ccs.neu.edu/" target="_blank">NU Women in Tech</a>
-                    <p className="project-desc">Club website redesigned and redeveloped as while serving as web chair on e-board</p>
-                  </div>
-                  <div className="project-item">
-                    <a className="project-title" href="http://onecardforall.mullenloweus.com/" target="_blank">One Card For All</a>
-                    <p className="project-desc">2015 Mullen Lowe U.S. holiday site built around an algorithm that generated a holiday greeting to each and every person on the planet</p>
-                  </div>
-                </div>
-              </div>
-              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
+        </div>
+        <div class="projects">
+          <h4>Projects</h4>
+          <div class="content">
+            <div class="project-item">
+              <a class="project-title" href="https://github.com/shivani-k/riscv-console" target="_blank">Custom Operating System and Snake Game</a>
+              <p class="project-desc">Built a custom operating system from scratch on a hypothetical RISC-V based game console. Developed a snake game to work with the developed firmware. Developed multiple APIs for other game developers to port their game into my firmware. These APIs included I/O Controller APIs, Timer based APIs, Thread Management, Graphics APIs and Memory Management APIs.</p>
+            </div>
+            <div class="project-item">
+              <a class="project-title" href="https://github.com/shivani-k/ML_ImageGeneration" target="_blank">Abstract Art Generation Using Speech Emotions</a>
+              <p class="project-desc">Used VQGAN and CLIP together as a generator and perceptor on Python Speech Recognition Models: CNN, NLP, LSTM and compared their performance</p>
+            </div>
+            <div class="project-item">
+              <a class="project-title" href="https://github.com/shivani-k/RadTok" target="_blank">RadTok</a>
+              <p class="project-desc">Using Radix blockchain technology RADTOK is a video streaming platform for fair compensation of content creators using the Radix ecosystem for Blockchain</p>
+            </div>
+            <div class="project-item">
+              <a class="project-title" href="https://github.com/shivani-k/BrowserExtensionEcosystemAnalysis" target="_blank">Browser Extension Ecosystem</a>
+              <p class="project-desc">Leveraging Python and the ExtAnalysis core library, this project extensively compared Chrome and Firefox extensions with AWS ECS hosting the pipeline. GraphQL enabled scalable analyses of manifest.json file permissions and domains, stored in DynamoDB. CloudWatch ensured monitoring and security, creating a robust platform for browser extension ecosystem analysis.</p>
+            </div>
+            <div class="project-item">
+              <a class="project-title">Handwriting to Text Conversion</a>
+              <p class="project-desc">Built in Android Studio using Google Vision API in Java for pharmacy maintenance and analysis using Linear Regression in Python</p>
             </div>
           </div>
-        );
+        </div>
+        <a class="resume" href="./img/resume.pdf" target="_blank"><div class="resume-link">Grab a PDF of my full resume</div></a>
+        <br>
+
+        <div class="contact_d">
+          <h5><span class="wave"> 👋</span></h5>
+          <form action="https://formspree.io/f/xvojwybz" method="POST" id="myForm">
+            <div>
+              <label class="project-title" for="name">Name</label>
+              <input type="text" name="name" id="name"/>
+            </div>
+            <div>
+              <label class="project-title" for="email">Email</label>
+              <input type="text" name="email" id="email" />
+            </div>
+            <div>
+              <label class="project-title" for="message">Message</label>
+              <textarea name="message" id="message" rows="6" class="styled-textarea"></textarea>
+            </div>
+            <input type="submit" value="Send" class="styled-buttons3" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Get references to the button and the form
+    const showFormButton = document.getElementById('showFormButton');
+    const myForm = document.getElementById('myForm');
+
+    // Add a click event listener to the button
+    showFormButton.addEventListener('click', function() {
+      // Toggle the form's visibility
+      if (myForm.style.display === 'none') {
+        myForm.style.display = 'block';
+      } else {
+        myForm.style.display = 'none';
       }
     });
-
-    ReactDOM.render(
-      <App profileData={DATA}/>,
-      document.getElementById('content')
-    );
-
-
-  </script>
+</script>
 </body>
-</html>
